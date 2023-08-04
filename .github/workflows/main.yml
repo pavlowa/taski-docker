@@ -142,10 +142,6 @@ jobs:
         target: "taski"
     - name: Executing remote ssh commands to deploy
       uses: appleboy/ssh-action@master
-      env:
-        ALLOWED_HOSTS: ${{ secrets.ALLOWED_HOSTS }}
-        DEBUG: ${{ secrets.DEBUG }}
-        SECRET_KEY: ${{ secrets.SECRET_KEY }}
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER }}
